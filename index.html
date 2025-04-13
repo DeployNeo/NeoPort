@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neo's Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="container">
+    <nav>
+      <h2>Neo</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero container fade-in">
+    <h1>Hello, I'm Neo</h1>
+    <img src="https://i.ibb.co/20rwX8Dy/Icon.jpg" alt="Neo's Profile Picture" class="profile-picture">
+    <div class="typing"></div>
+  </section>
+
+  <section id="about" class="container fade-in">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate developer skilled in <strong>Python</strong>, <strong>JavaScript</strong>, and <strong>C</strong>.
+      I’ve built over <strong>100+ GitHub repositories</strong> ranging from bots to automation tools. Currently, I’m focused on
+      building high-quality <strong>Discord bots</strong> and backend systems that make people's lives easier.
+    </p>
+  </section>
+
+  <section id="projects" class="container fade-in">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Bot Logo" class="project-logo">
+        <h3>Discord Anti-Nuke Bot</h3>
+        <p>A powerful security bot with 20+ protections, modern UI and live toggling.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo" class="project-logo">
+        <h3>Telegram VBV Checker</h3>
+        <p>Advanced logic-based system to verify VBV/Non-VBV cards without external APIs.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="Silent App" class="project-logo">
+        <h3>Auto Silent Mode App</h3>
+        <p>An Android app that automatically sets your phone to silent at scheduled times. Built for productivity and peace.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container fade-in">
+    <h2>Contact Me</h2>
+    <form action="https://formsubmit.co/arhamupcem@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required/>
+      <input type="email" name="email" placeholder="Your Email" required/>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="container fade-in">
+    <p>© 2025 Neo. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
+      </a>
+      <a href="https://discord.com/users/YOUR_DISCORD_ID" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord" />
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
