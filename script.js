@@ -1,4 +1,4 @@
-// Typing effect for intro
+
 const typingTexts = [
   "Python, JavaScript, and C Developer.",
   "100+ GitHub repositories.",
@@ -37,7 +37,6 @@ function type() {
 document.addEventListener("DOMContentLoaded", () => {
   type();
 
-  // Scroll animations
   const fadeElements = document.querySelectorAll('.fade-in');
   const cardElements = document.querySelectorAll('.project-card');
 
