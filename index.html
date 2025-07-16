@@ -4,76 +4,130 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Neo's Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="https://i.ibb.co/20rwX8Dy/Icon.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header class="container">
+  <header class="container glass">
     <nav>
       <h2>Neo</h2>
-      <ul>
+      <div class="nav-toggle" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </div>
+      <ul id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#stats">Stats</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero container fade-in">
+  <section class="hero container fade-in glass">
     <h1>Hello, I'm Neo</h1>
-    <img src="https://i.ibb.co/20rwX8Dy/Icon.jpg" alt="Neo's Profile Picture" class="profile-picture">
+    <img src="https://i.ibb.co/20rwX8Dy/Icon.jpg" alt="Neo Profile" class="profile-picture">
     <div class="typing"></div>
+    <div class="hero-socials">
+      <a href="https://github.com/DeployNeo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" /></a>
+      <a href="https://discord.com/users/1314837294544457759" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord" /></a>
+    </div>
   </section>
 
-  <section id="about" class="container fade-in">
+  <section id="about" class="container fade-in glass">
     <h2>About Me</h2>
     <p>
-      I'm a passionate developer skilled in <strong>Python</strong>, <strong>JavaScript</strong>, and <strong>C</strong>.
-      I’ve built over <strong>100+ GitHub repositories</strong> ranging from bots to automation tools. Currently, I’m focused on
-      building high-quality <strong>Discord bots</strong> and backend systems that make people's lives easier.
+      I'm a passionate developer skilled in <strong>Python</strong>, <strong>JavaScript</strong>, and <strong>C</strong>. I’ve built over <strong>100+ GitHub repositories</strong> ranging from bots to automation tools. I specialize in <strong>Discord bots</strong>, APIs, and backend systems.
     </p>
+    <ul class="about-list">
+      <li>💡 Loves automation and backend logic</li>
+      <li>🚀 Open-source contributor</li>
+      <li>🎓 Lifelong learner</li>
+      <li>🌐 Tech community enthusiast</li>
+    </ul>
   </section>
 
-  <section id="projects" class="container fade-in">
+  <section id="projects" class="container fade-in glass">
     <h2>Projects</h2>
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="bot">Bots</button>
+      <button class="filter-btn" data-filter="web">Web</button>
+      <button class="filter-btn" data-filter="app">Apps</button>
+      <button class="filter-btn" data-filter="automation">Automation</button>
+    </div>
     <div class="project-grid">
-      <div class="project-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Bot Logo" class="project-logo">
-        <h3>Discord Anti-Nuke Bot</h3>
-        <p>A powerful security bot with 20+ protections, modern UI and live toggling.</p>
+      <!-- Sample project card -->
+      <div class="project-card" data-category="bot">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png" class="project-logo">
+        <h3>Music Discord Bot</h3>
+        <p>Advanced Discord bot with music features, playlist, filters, and commands.</p>
+        <a href="#" class="project-link">View on GitHub</a>
       </div>
-      <div class="project-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Logo" class="project-logo">
-        <h3>Telegram VBV Checker</h3>
-        <p>Advanced logic-based system to verify VBV/Non-VBV cards without external APIs.</p>
+      <div class="project-card" data-category="automation">
+        <img src="https://cdn-icons-png.flaticon.com/512/906/906334.png" class="project-logo">
+        <h3>Auto Email Sender</h3>
+        <p>Python tool that automates emails with scheduling and file attachments.</p>
+        <a href="#" class="project-link">View on GitHub</a>
       </div>
-      <div class="project-card">
-        <img src="https://cdn-icons-png.flaticon.com/512/3524/3524659.png" alt="Silent App" class="project-logo">
-        <h3>Auto Silent Mode App</h3>
-        <p>An Android app that automatically sets your phone to silent at scheduled times. Built for productivity and peace.</p>
+      <div class="project-card" data-category="web">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732212.png" class="project-logo">
+        <h3>Portfolio Template</h3>
+        <p>Modern responsive developer portfolio built with HTML, CSS, JS.</p>
+        <a href="#" class="project-link">View on GitHub</a>
+      </div>
+      <div class="project-card" data-category="app">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" class="project-logo">
+        <h3>Task Manager App</h3>
+        <p>Cross-platform app with cloud sync and daily reminders for productivity.</p>
+        <a href="#" class="project-link">View on GitHub</a>
+      </div>
+      <div class="project-card" data-category="bot">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" class="project-logo">
+        <h3>Anti-Nuke Discord Bot</h3>
+        <p>Security bot with role lockdowns, ban monitoring, and logs.</p>
+        <a href="#" class="project-link">View on GitHub</a>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="container fade-in">
+  <section id="stats" class="container fade-in glass">
+    <h2>My Stats</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <h3 id="stat-repos">100+</h3>
+        <p>GitHub Repos</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="stat-bots">20+</h3>
+        <p>Discord Bots</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="stat-clients">30+</h3>
+        <p>Happy Clients</p>
+      </div>
+      <div class="stat-card">
+        <h3 id="stat-years">3</h3>
+        <p>Years Experience</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="container fade-in glass">
     <h2>Contact Me</h2>
     <form action="https://formsubmit.co/arhamupcem@gmail.com" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required/>
-      <input type="email" name="email" placeholder="Your Email" required/>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
       <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
-  <footer class="container fade-in">
+  <footer class="container fade-in glass">
     <p>© 2025 Neo. All rights reserved.</p>
     <div class="social-icons">
-      <a href="https://github.com/DeployNeo" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" />
-      </a>
-      <a href="https://discord.com/users/1314837294544457759" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" alt="Discord" />
-      </a>
+      <a href="https://github.com/DeployNeo" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" /></a>
+      <a href="https://discord.com/users/1314837294544457759" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" /></a>
     </div>
   </footer>
 
